@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curiozități și Aplicații | Trigonometrie Clasa a IX-a</title>
+    <meta name="description"
+        content="Curiozități despre istoria trigonometriei, aplicații practice și un mini-quiz interactiv.">
+    <link rel="stylesheet" href="css/style.css">
+    <script id="MathJax-script" async src="js/mathjax/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+
+    <header id="mainHeader">
+        <a class="header-logo" href="index.html" aria-label="Acasă">
+            <div class="header-logo-text">
+                <span class="title">Trigonometrie</span>
+                <span class="subtitle">Clasa a IX‑a</span>
+            </div>
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation" aria-expanded="false">☰</button>
+        <nav id="mainNav">
+            <ul>
+                <li><a href="index.html">Acasă</a></li>
+                <li><a href="cerc-trigonometric.html">Cerc Trig.</a></li>
+                <li><a href="proprietati-functii.html">Proprietăți</a></li>
+                <li><a href="formule-trigonometrice.html">Formule</a></li>
+                <li><a href="rezolvarea-triunghiului.html">Triunghi</a></li>
+                <li><a href="curiozitati.html" class="active">Curiozități</a></li>
+                <li><a href="calculator-unghiuri.html">Calculator</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content-page">
+
+        <div class="page-hero fade-slide-in">
+            <div class="page-tag">Explorare & Joc</div>
+            <h1>Curiozități & Quiz</h1>
+            <p>Descoperă istoria fascinantă a trigonometriei, aplicațiile sale practice în lumea reală și testează-ți
+                cunoștințele cu un mini-quiz interactiv.</p>
+        </div>
+
+        <section class="fade-slide-in">
+            <h2>Despre Trigonometrie</h2>
+            <p>Trigonometria, ramura matematicii care studiază relațiile dintre laturile și unghiurile triunghiurilor,
+                are o <strong>istorie de peste 4000 de ani</strong> și aplicații în aproape orice domeniu al științei
+                moderne.</p>
+        </section>
+
+        <section class="interactive-section fade-slide-in">
+            <h3>Curiozități</h3>
+            <ul id="curiosityList" class="curiosity-list"></ul>
+
+            <hr>
+
+            <h3>Aplicații Practice</h3>
+            <p>Trigonometria este <strong>peste tot</strong> în lumea modernă!</p>
+            <ul id="applicationList" class="application-list"></ul>
+        </section>
+
+        <section class="quiz-section fade-slide-in">
+            <h2>Mini-Quiz</h2>
+            <p style="color: var(--txt-muted); font-size:0.9rem; margin-bottom: var(--space-lg);">Testează-ți cultura
+                generală de trigonometrie!</p>
+
+            <div id="trigonometricQuiz" class="quiz-questions"></div>
+
+            <button id="submitQuiz">Verifică Răspunsurile</button>
+
+            <div id="quizResult" class="quiz-results" style="display:none;">
+                <h3>Rezultatul tău</h3>
+                <span id="quizScore"></span>
+                <button id="restartQuiz">Repetă Testul</button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-brand">
+            Trigonometrie Clasa a IX-a
+        </div>
+        <p>&copy; LIIS 2026 — Realizat de Ursanu Tudor</p>
+    </footer>
+
+    <button id="scrollToTopBtn" title="Sus">↑</button>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

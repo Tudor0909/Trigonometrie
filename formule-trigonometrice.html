@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formule Trigonometrice Clasa a IX-a | Trigonometrie</title>
+    <meta name="description"
+        content="Colecție completă de formule trigonometrice: identități fundamentale, suma/diferența de unghiuri, dublul unghiului și transformări.">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        window.MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']] }
+        };
+    </script>
+    <script id="MathJax-script" async src="js/mathjax/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+
+    <header id="mainHeader">
+        <a class="header-logo" href="index.html" aria-label="Acasă">
+            <div class="header-logo-text">
+                <span class="title">Trigonometrie</span>
+                <span class="subtitle">Clasa a IX‑a</span>
+            </div>
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation" aria-expanded="false">☰</button>
+        <nav id="mainNav">
+            <ul>
+                <li><a href="index.html">Acasă</a></li>
+                <li><a href="cerc-trigonometric.html">Cerc Trig.</a></li>
+                <li><a href="proprietati-functii.html">Proprietăți</a></li>
+                <li><a href="formule-trigonometrice.html" class="active">Formule</a></li>
+                <li><a href="rezolvarea-triunghiului.html">Triunghi</a></li>
+                <li><a href="curiozitati.html">Curiozități</a></li>
+                <li><a href="calculator-unghiuri.html">Calculator</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content-page">
+
+        <div class="page-hero fade-slide-in">
+            <div class="page-tag">Referință Matematică</div>
+            <h1>Formule Trigonometrice</h1>
+            <p>Colecție completă de formule esențiale pentru clasa a IX-a: de la identitățile fundamentale la
+                transformările produs-sumă.</p>
+        </div>
+
+        <!-- IDENTITĂȚI FUNDAMENTALE -->
+        <div class="function-card fade-slide-in">
+            <div class="function-card-header">
+                <h2>Identități Fundamentale</h2>
+            </div>
+            <div class="function-card-body">
+                <p>Relațiile dintre \(\sin\), \(\cos\), \(\text{tg}\) și \(\text{ctg}\) ale <strong>aceluiași unghi</strong>
+                    \(\alpha\). Derivă direct din cercul trigonometric \( x^2 + y^2 = 1 \) și sunt punctul de plecare
+                    pentru orice simplificare sau demonstrație.</p>
+
+                <h3>Teorema fundamentală a trigonometriei</h3>
+                <div class="formula-block">
+                    $$ \sin^2\alpha + \cos^2\alpha = 1 $$
+                </div>
+
+                <h3>Relația de reciprocitate</h3>
+                <div class="formula-block">
+                    $$ \text{tg}\,\alpha \cdot \text{ctg}\,\alpha = 1,\quad \alpha \neq \frac{k\pi}{2},\; k \in \mathbb{Z} $$
+                </div>
+
+                <h3>Identități Pitagora derivate</h3>
+                <div class="formula-block">
+                    $$ 1 + \text{tg}^2\alpha = \frac{1}{\cos^2\alpha},\quad \cos\alpha \neq 0 $$
+                </div>
+                <div class="formula-block">
+                    $$ 1 + \text{ctg}^2\alpha = \frac{1}{\sin^2\alpha},\quad \sin\alpha \neq 0 $$
+                </div>
+            </div>
+        </div>
+
+        <!-- SUMA ȘI DIFERENȚA -->
+        <div class="function-card fade-slide-in">
+            <div class="function-card-header">
+                <h2>Suma și Diferența de Unghiuri</h2>
+            </div>
+            <div class="function-card-body">
+                <p>Calculează \(\sin(x \pm y)\), \(\cos(x \pm y)\), \(\text{tg}(x \pm y)\) și \(\text{ctg}(x \pm y)\)
+                    cunoscând doar valorile funcțiilor pentru \(x\) și \(y\) <strong>separat</strong>. Din ele derivă
+                    toate celelalte formule de pe această pagină.</p>
+
+                <h3>Pentru sinus</h3>
+                <div class="formula-block">
+                    $$ \sin(x+y) = \sin x\cos y + \cos x\sin y $$
+                    $$ \sin(x-y) = \sin x\cos y - \cos x\sin y $$
+                </div>
+
+                <h3>Pentru cosinus</h3>
+                <div class="formula-block">
+                    $$ \cos(x+y) = \cos x\cos y - \sin x\sin y $$
+                    $$ \cos(x-y) = \cos x\cos y + \sin x\sin y $$
+                </div>
+
+                <h3>Pentru tangentă</h3>
+                <div class="formula-block">
+                    $$ \text{tg}(x+y) = \frac{\text{tg}\,x + \text{tg}\,y}{1 - \text{tg}\,x\,\text{tg}\,y} \qquad
+                    \text{tg}(x-y) = \frac{\text{tg}\,x - \text{tg}\,y}{1 + \text{tg}\,x\,\text{tg}\,y} $$
+                </div>
+
+                <h3>Pentru cotangentă</h3>
+                <div class="formula-block">
+                    $$ \text{ctg}(x+y) = \frac{\text{ctg}\,x\,\text{ctg}\,y - 1}{\text{ctg}\,x + \text{ctg}\,y} \qquad
+                    \text{ctg}(x-y) = \frac{\text{ctg}\,x\,\text{ctg}\,y + 1}{\text{ctg}\,y - \text{ctg}\,x} $$
+                </div>
+            </div>
+        </div>
+
+        <!-- DUBLUL UNGHIULUI -->
+        <div class="function-card fade-slide-in">
+            <div class="function-card-header">
+                <h2>Formule pentru Dublul Unghiului</h2>
+            </div>
+            <div class="function-card-body">
+                <p>Calculează \(\sin(2x)\), \(\cos(2x)\), \(\text{tg}(2x)\) și \(\text{ctg}(2x)\) cunoscând doar
+                    \(\sin x\) și \(\cos x\). Se obțin din formulele de sumă punând \(x = y\) și sunt esențiale la
+                    reducerea expresiilor trigonometrice.</p>
+
+                <h3>Pentru sinus</h3>
+                <div class="formula-block">
+                    $$ \sin(2x) = 2\sin x\cos x $$
+                </div>
+
+                <h3>Pentru cosinus (trei forme echivalente)</h3>
+                <div class="formula-block">
+                    $$ \cos(2x) = \cos^2 x - \sin^2 x = 2\cos^2 x - 1 = 1 - 2\sin^2 x $$
+                </div>
+
+                <h3>Pentru tangentă</h3>
+                <div class="formula-block">
+                    $$ \text{tg}(2x) = \frac{2\,\text{tg}\,x}{1 - \text{tg}^2 x} $$
+                </div>
+
+                <h3>Pentru cotangentă</h3>
+                <div class="formula-block">
+                    $$ \text{ctg}(2x) = \frac{\text{ctg}^2 x - 1}{2\,\text{ctg}\,x} $$
+                </div>
+            </div>
+        </div>
+
+        <!-- JUMĂTATEA UNGHIULUI -->
+        <div class="function-card fade-slide-in">
+            <div class="function-card-header">
+                <h2>Formule pentru Jumătatea Unghiului</h2>
+            </div>
+            <div class="function-card-body">
+                <p>Exprimă \(\sin^2\!\tfrac{x}{2}\), \(\cos^2\!\tfrac{x}{2}\) și \(\text{tg}^2\!\tfrac{x}{2}\) folosind
+                    doar \(\cos x\). Permit trecerea de la pătrate la o formă liniară în cosinus — foarte utile la
+                    integrare și la reducerea puterilor.</p>
+
+                <h3>Pentru sinus și cosinus (formele pătratice)</h3>
+                <div class="formula-block">
+                    $$ \sin^2\!\frac{x}{2} = \frac{1 - \cos x}{2} \qquad \cos^2\!\frac{x}{2} = \frac{1 + \cos x}{2} $$
+                </div>
+
+                <h3>Pentru tangentă</h3>
+                <div class="formula-block">
+                    $$ \text{tg}^2\!\frac{x}{2} = \frac{1 - \cos x}{1 + \cos x} $$
+                </div>
+            </div>
+        </div>
+
+        <!-- SUME → PRODUSE -->
+        <div class="function-card fade-slide-in">
+            <div class="function-card-header">
+                <h2>Transformarea Sumelor în Produse</h2>
+            </div>
+            <div class="function-card-body">
+                <p>Scriu expresii de forma \(\sin A \pm \sin B\), \(\cos A \pm \cos B\) și \(\text{tg}\,A \pm \text{tg}\,B\)
+                    ca <strong>produse</strong>. Instrumentul principal pentru factorizare și pentru rezolvarea
+                    ecuațiilor trigonometrice.</p>
+
+                <h3>Pentru sinus</h3>
+                <div class="formula-block">
+                    $$ \sin A + \sin B = 2\sin\frac{A+B}{2}\cos\frac{A-B}{2} $$
+                    $$ \sin A - \sin B = 2\sin\frac{A-B}{2}\cos\frac{A+B}{2} $$
+                </div>
+
+                <h3>Pentru cosinus</h3>
+                <div class="formula-block">
+                    $$ \cos A + \cos B = 2\cos\frac{A+B}{2}\cos\frac{A-B}{2} $$
+                    $$ \cos A - \cos B = -2\sin\frac{A+B}{2}\sin\frac{A-B}{2} $$
+                </div>
+
+                <h3>Pentru tangentă</h3>
+                <div class="formula-block">
+                    $$ \text{tg}\,A \pm \text{tg}\,B = \frac{\sin(A \pm B)}{\cos A\cos B} $$
+                </div>
+            </div>
+        </div>
+
+        <!-- PRODUSE → SUME -->
+        <div class="function-card fade-slide-in">
+            <div class="function-card-header">
+                <h2>Transformarea Produselor în Sume</h2>
+            </div>
+            <div class="function-card-body">
+                <p>Scriu produse de forma \(\sin x\cos y\), \(\sin x\sin y\) și \(\cos x\cos y\) ca <strong>sume
+                        sau diferențe</strong> de funcții de unghiuri simple (\(x+y\), \(x-y\)). Esențiale pentru
+                    liniarizarea expresiilor și la integrare.</p>
+
+                <h3>Produse mixte (sin · cos)</h3>
+                <div class="formula-block">
+                    $$ 2\sin x\cos y = \sin(x+y) + \sin(x-y) $$
+                    $$ 2\cos x\sin y = \sin(x+y) - \sin(x-y) $$
+                </div>
+
+                <h3>Produse de același tip</h3>
+                <div class="formula-block">
+                    $$ 2\cos x\cos y = \cos(x+y) + \cos(x-y) $$
+                    $$ 2\sin x\sin y = \cos(x-y) - \cos(x+y) $$
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-brand">
+            Trigonometrie Clasa a IX-a
+        </div>
+        <p>&copy; LIIS 2026 — Realizat de Ursanu Tudor</p>
+    </footer>
+
+    <button id="scrollToTopBtn" title="Sus">↑</button>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

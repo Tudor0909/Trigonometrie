@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cercul Trigonometric Interactiv | Trigonometrie Clasa a IX-a</title>
+    <meta name="description"
+        content="Explorează cercul trigonometric interactiv. Vizualizează funcțiile trigonometrice și formulele de reducere la cadrane.">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
+        };
+    </script>
+    <script id="MathJax-script" async src="js/mathjax/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+
+    <header id="mainHeader">
+        <a class="header-logo" href="index.html" aria-label="Acasă">
+            <div class="header-logo-text">
+                <span class="title">Trigonometrie</span>
+                <span class="subtitle">Clasa a IX‑a</span>
+            </div>
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation" aria-expanded="false">☰</button>
+        <nav id="mainNav">
+            <ul>
+                <li><a href="index.html">Acasă</a></li>
+                <li><a href="cerc-trigonometric.html" class="active">Cerc Trig.</a></li>
+                <li><a href="proprietati-functii.html">Proprietăți</a></li>
+                <li><a href="formule-trigonometrice.html">Formule</a></li>
+                <li><a href="rezolvarea-triunghiului.html">Triunghi</a></li>
+                <li><a href="curiozitati.html">Curiozități</a></li>
+                <li><a href="calculator-unghiuri.html">Calculator</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content-page">
+
+        <div class="page-hero fade-slide-in">
+            <div class="page-tag">Vizualizare Interactivă</div>
+            <h1>Cercul Trigonometric</h1>
+            <p>Trage punctul pe cerc pentru a vizualiza în timp real valorile funcțiilor trigonometrice și cadranul
+                corespunzător.</p>
+        </div>
+
+        <!-- CERC INTERACTIV -->
+        <div class="function-card fade-slide-in">
+            <div class="function-card-header">
+                <h2>Explorează Cercul Trigonometric</h2>
+            </div>
+            <div class="function-card-body">
+                <h3>Definiție</h3>
+                <p>Cercul trigonometric este un cerc cu centrul în originea sistemului de coordonate și raza \(R = 1\).
+                    Orice punct de pe cerc are coordonatele \((\cos\alpha,\, \sin\alpha)\).</p>
+
+                <h3>Cum folosești vizualizarea</h3>
+                <p><strong>Click și trage punctul</strong> pe cerc pentru a vedea cum variază unghiul, coordonatele și
+                    valorile funcțiilor trigonometrice. Activează opțiunea <em>„Lipește pe axe"</em> pentru a sări
+                    direct la unghiurile remarcabile \(0°, 90°, 180°, 270°\).</p>
+
+                <div class="canvas-container">
+                    <canvas id="trigonometricCanvas" width="520" height="520"></canvas>
+                    <div class="controls-panel">
+                        <h3>Date Punct</h3>
+                        <p><strong>Unghi (Grade):</strong> <span id="angleDeg">0</span>°</p>
+                        <p><strong>Unghi (Radiani):</strong> <span id="angleRad">0</span> rad</p>
+                        <p><strong>Coordonate:</strong> <span>(<span id="coordX">1.0000</span>, <span
+                                    id="coordY">0.0000</span>)</span></p>
+                        <p>\(\sin(\alpha):\) <span id="sinValue">0.000</span></p>
+                        <p>\(\cos(\alpha):\) <span id="cosValue">1.000</span></p>
+                        <p>\(\mathrm{tg}(\alpha):\) <span id="tanValue">0.000</span></p>
+                        <p>\(\mathrm{ctg}(\alpha):\) <span id="cotValue">N/A</span></p>
+                        <p><strong>Cadran:</strong> <span id="quadrant">I</span></p>
+                        <label class="snap-toggle">
+                            <input type="checkbox" id="snapAxesToggle">
+                            <span>Lipește pe axe (0°, 90°, 180°, 270°)</span>
+                        </label>
+                        <button id="resetCircleBtn" class="btn btn-secondary" style="width:100%">Resetează
+                            Punctul</button>
+                    </div>
+                </div>
+
+                <h3>Elemente cheie</h3>
+                <ul>
+                    <li><strong>Axe de coordonate:</strong> Cercul este plasat într-un sistem de coordonate \(xOy\).</li>
+                    <li><strong>Raza unitate:</strong> Raza cercului este \(R = 1\).</li>
+                    <li><strong>Originea unghiurilor:</strong> Unghiurile se măsoară de la axa pozitivă \(Ox\), în sens
+                        trigonometric (invers acelor de ceasornic).</li>
+                    <li><strong>Punctul mobil:</strong> Orice punct de pe cerc are coordonatele \((\cos\alpha,\,
+                        \sin\alpha)\).</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- REDUCERE LA CADRANUL I -->
+        <div class="function-card fade-slide-in">
+            <div class="function-card-header">
+                <h2>Formulele de Reducere la Cadranul I</h2>
+            </div>
+            <div class="function-card-body">
+                <p>Aceste formule permit calculul funcțiilor trigonometrice pentru unghiuri din orice cadran,
+                    reducându-le la unghiuri echivalente din cadranul I. Semnul depinde de cadranul de origine.</p>
+
+                <h3>Cadranul I — \(\left(0, \tfrac{\pi}{2}\right)\)</h3>
+                <div class="formula-block">
+                    $$ \sin\!\left(\tfrac{\pi}{2} - \alpha\right) = \cos\alpha \qquad \cos\!\left(\tfrac{\pi}{2} -
+                    \alpha\right) = \sin\alpha $$
+                    $$ \text{tg}\!\left(\tfrac{\pi}{2} - \alpha\right) = \text{ctg}\,\alpha \qquad
+                    \text{ctg}\!\left(\tfrac{\pi}{2} - \alpha\right) = \text{tg}\,\alpha $$
+                </div>
+
+                <h3>Cadranul II — \(\left(\tfrac{\pi}{2}, \pi\right)\)</h3>
+                <div class="formula-block">
+                    <div class="formula-subhead">Prin \(\tfrac{\pi}{2} + \alpha\)</div>
+                    $$ \sin\!\left(\tfrac{\pi}{2} + \alpha\right) = \cos\alpha \qquad \cos\!\left(\tfrac{\pi}{2} +
+                    \alpha\right) = -\sin\alpha $$
+                    $$ \text{tg}\!\left(\tfrac{\pi}{2} + \alpha\right) = -\text{ctg}\,\alpha \qquad
+                    \text{ctg}\!\left(\tfrac{\pi}{2} + \alpha\right) = -\text{tg}\,\alpha $$
+                    <div class="formula-subhead">Prin \(\pi - \alpha\)</div>
+                    $$ \sin(\pi - \alpha) = \sin\alpha \qquad \cos(\pi - \alpha) = -\cos\alpha $$
+                    $$ \text{tg}(\pi - \alpha) = -\text{tg}\,\alpha \qquad \text{ctg}(\pi - \alpha) = -\text{ctg}\,\alpha $$
+                </div>
+
+                <h3>Cadranul III — \(\left(\pi, \tfrac{3\pi}{2}\right)\)</h3>
+                <div class="formula-block">
+                    <div class="formula-subhead">Prin \(\pi + \alpha\)</div>
+                    $$ \sin(\pi + \alpha) = -\sin\alpha \qquad \cos(\pi + \alpha) = -\cos\alpha $$
+                    $$ \text{tg}(\pi + \alpha) = \text{tg}\,\alpha \qquad \text{ctg}(\pi + \alpha) = \text{ctg}\,\alpha $$
+                    <div class="formula-subhead">Prin \(\tfrac{3\pi}{2} - \alpha\)</div>
+                    $$ \sin\!\left(\tfrac{3\pi}{2} - \alpha\right) = -\cos\alpha \qquad \cos\!\left(\tfrac{3\pi}{2} -
+                    \alpha\right) = -\sin\alpha $$
+                    $$ \text{tg}\!\left(\tfrac{3\pi}{2} - \alpha\right) = \text{ctg}\,\alpha \qquad
+                    \text{ctg}\!\left(\tfrac{3\pi}{2} - \alpha\right) = \text{tg}\,\alpha $$
+                </div>
+
+                <h3>Cadranul IV — \(\left(\tfrac{3\pi}{2}, 2\pi\right)\)</h3>
+                <div class="formula-block">
+                    <div class="formula-subhead">Prin \(\tfrac{3\pi}{2} + \alpha\)</div>
+                    $$ \sin\!\left(\tfrac{3\pi}{2} + \alpha\right) = -\cos\alpha \qquad \cos\!\left(\tfrac{3\pi}{2} +
+                    \alpha\right) = \sin\alpha $$
+                    $$ \text{tg}\!\left(\tfrac{3\pi}{2} + \alpha\right) = -\text{ctg}\,\alpha \qquad
+                    \text{ctg}\!\left(\tfrac{3\pi}{2} + \alpha\right) = -\text{tg}\,\alpha $$
+                    <div class="formula-subhead">Prin \(2\pi - \alpha\)</div>
+                    $$ \sin(2\pi - \alpha) = -\sin\alpha \qquad \cos(2\pi - \alpha) = \cos\alpha $$
+                    $$ \text{tg}(2\pi - \alpha) = -\text{tg}\,\alpha \qquad \text{ctg}(2\pi - \alpha) = -\text{ctg}\,\alpha $$
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-brand">
+            Trigonometrie Clasa a IX-a
+        </div>
+        <p>&copy; LIIS 2026 — Realizat de Ursanu Tudor</p>
+    </footer>
+
+    <button id="scrollToTopBtn" title="Sus">↑</button>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

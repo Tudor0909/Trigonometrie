@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trigonometrie IX | Premium Education</title>
+    <meta name="description"
+        content="Explorează trigonometria clasei a IX-a cu vizualizări interactive, formule, cerc trigonometric și calculator. Realizat de Macsim David și Ursanu Tudor.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header id="mainHeader">
+        <a class="header-logo" href="index.html" aria-label="Acasă">
+            <div class="header-logo-text">
+                <span class="title">Trigonometrie</span>
+                <span class="subtitle">Clasa a IX‑a</span>
+            </div>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation" aria-expanded="false">☰</button>
+
+        <nav id="mainNav">
+            <ul>
+                <li><a href="index.html" class="active">Acasă</a></li>
+                <li><a href="cerc-trigonometric.html">Cerc Trig.</a></li>
+                <li><a href="proprietati-functii.html">Proprietăți</a></li>
+                <li><a href="formule-trigonometrice.html">Formule</a></li>
+                <li><a href="rezolvarea-triunghiului.html">Triunghi</a></li>
+                <li><a href="curiozitati.html">Curiozități</a></li>
+                <li><a href="calculator-unghiuri.html">Calculator</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="home-hero">
+            <canvas id="particleCanvas"></canvas>
+            <div class="hero-content">
+                <div class="hero-eyebrow">
+                    <span class="dot"></span>
+                    Matematică Interactivă · Clasa a IX-a
+                </div>
+
+                <h1 class="hero-title">
+                    <span class="line-plain">Explorează</span>
+                    <span class="line-gradient">Trigonometria</span>
+                </h1>
+
+                <p class="hero-subtitle">
+                    Descoperă funcțiile trigonometrice, cercul trigonometric, formulele esențiale
+                    și curiozități prin vizualizări dinamice și instrumente interactive.
+                </p>
+
+                <div class="hero-cta">
+                    <a href="cerc-trigonometric.html" class="btn btn-primary">
+                        Începe Explorarea
+                    </a>
+                    <a href="calculator-unghiuri.html" class="btn btn-secondary">
+                        Calculator Interactiv
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURE CARDS -->
+        <section class="features-section fade-slide-in">
+            <h2>Tot ce ai nevoie pentru trigonometrie</h2>
+            <p>Șase module interactive care acoperă întreaga programă de clasa a IX-a</p>
+
+            <div class="features-grid">
+
+                <a class="feature-card" href="cerc-trigonometric.html">
+                    <div class="feature-card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                    </div>
+                    <h3>Cercul Trigonometric</h3>
+                    <p>Vizualizează unghiurile, coordonatele și valorile funcțiilor pe cercul trigonometric interactiv.
+                        Explorează formulele de reducere la cadranul I.</p>
+                </a>
+
+                <a class="feature-card" href="proprietati-functii.html">
+                    <div class="feature-card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="2" y1="12" x2="22" y2="12"></line><path d="M2 12 Q 7 3, 12 12 T 22 12"></path><path d="M2 12 Q 7 21, 12 12 T 22 12"></path></svg>
+                    </div>
+                    <h3>Proprietăți Funcții</h3>
+                    <p>Domeniu, codomeniu, paritate, periodicitate, monotonie și semn pentru sin, cos, tg și ctg —
+                        explicate clar cu notații matematice.</p>
+                </a>
+
+                <a class="feature-card" href="formule-trigonometrice.html">
+                    <div class="feature-card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="6" y2="4"></line><line x1="6" y1="20" x2="18" y2="4"></line></svg>
+                    </div>
+                    <h3>Formule Trigonometrice</h3>
+                    <p>Identități fundamentale, formule pentru suma și diferența unghiurilor, dublul unghiului,
+                        jumătatea unghiului și transformări produs-sumă.</p>
+                </a>
+
+                <a class="feature-card" href="rezolvarea-triunghiului.html">
+                    <div class="feature-card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 22h20L12 2z"></path></svg>
+                    </div>
+                    <h3>Rezolvarea Triunghiului</h3>
+                    <p>Teorema sinusurilor, teorema cosinusului (Pitagora generalizat) și formula ariei cu sinus — cu
+                        toate cazurile aplicative.</p>
+                </a>
+
+                <a class="feature-card" href="curiozitati.html">
+                    <div class="feature-card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
+                    </div>
+                    <h3>Curiozități & Quiz</h3>
+                    <p>Descoperă istoria și aplicațiile practice ale trigonometriei în astronomie, arhitectură, muzică
+                        și inginerie. Testează-ți cunoștințele!</p>
+                </a>
+
+                <a class="feature-card" href="calculator-unghiuri.html">
+                    <div class="feature-card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><line x1="8" y1="6" x2="16" y2="6"></line><line x1="16" y1="14" x2="16" y2="18"></line><line x1="8" y1="10" x2="8" y2="18"></line><line x1="12" y1="10" x2="12" y2="18"></line><line x1="16" y1="10" x2="16" y2="10"></line></svg>
+                    </div>
+                    <h3>Calculator Unghiuri</h3>
+                    <p>Calculator interactiv pentru valorile funcțiilor. Introduci unghi în grade sau
+                        radiani, obții sin, cos, tg, ctg instantaneu.</p>
+                </a>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-brand">
+            Trigonometrie Clasa a IX-a
+        </div>
+        <p>&copy; LIIS 2026 — Realizat de Ursanu Tudor</p>
+    </footer>
+
+    <button id="scrollToTopBtn" title="Sus">↑</button>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

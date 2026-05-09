@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Unghiuri | Trigonometrie Clasa a IX-a</title>
+    <meta name="description"
+        content="Calculator interactiv pentru funcțiile trigonometrice. Introdu un unghi în grade sau radiani.">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        window.MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']] }
+        };
+    </script>
+    <script id="MathJax-script" async src="js/mathjax/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+
+    <header id="mainHeader">
+        <a class="header-logo" href="index.html" aria-label="Acasă">
+            <div class="header-logo-text">
+                <span class="title">Trigonometrie</span>
+                <span class="subtitle">Clasa a IX‑a</span>
+            </div>
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation" aria-expanded="false">☰</button>
+        <nav id="mainNav">
+            <ul>
+                <li><a href="index.html">Acasă</a></li>
+                <li><a href="cerc-trigonometric.html">Cerc Trig.</a></li>
+                <li><a href="proprietati-functii.html">Proprietăți</a></li>
+                <li><a href="formule-trigonometrice.html">Formule</a></li>
+                <li><a href="rezolvarea-triunghiului.html">Triunghi</a></li>
+                <li><a href="curiozitati.html">Curiozități</a></li>
+                <li><a href="calculator-unghiuri.html" class="active">Calculator</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content-page">
+
+        <div class="page-hero fade-slide-in">
+            <div class="page-tag">Instrument Interactiv</div>
+            <h1>Calculator Unghiuri</h1>
+            <p>Calculează instantaneu valorile funcțiilor trigonometrice pentru orice unghi, în grade sau radiani.</p>
+        </div>
+
+        <section class="fade-slide-in">
+            <h2>Calcul Funcții Trigonometrice</h2>
+            <div class="calculator-grid">
+                <div class="input-group">
+                    <label for="angleInputCalc">Introduceți unghiul:</label>
+                    <input type="number" id="angleInputCalc" placeholder="ex: 30" value="30">
+                    <label for="angleUnit">Unitatea de măsură:</label>
+                    <select id="angleUnit">
+                        <option value="degrees">Grade (°)</option>
+                        <option value="radians">Radiani (rad)</option>
+                        <option value="pi">Multipli de π (× π rad)</option>
+                    </select>
+                    <button id="calculateBtn">Calculează</button>
+                </div>
+
+                <div class="results-group">
+                    <h3
+                        style="color: var(--txt-secondary); font-size:0.85rem; text-transform:uppercase; letter-spacing:0.07em; margin-bottom: var(--space-md);">
+                        Rezultate</h3>
+                    <p>Unghi (Radiani): <span id="displayAngleRad">—</span></p>
+                    <p>Unghi (Grade): <span id="displayAngleDeg">—</span></p>
+                    <p>\(\sin\): <span id="resultSin">—</span></p>
+                    <p>\(\cos\): <span id="resultCos">—</span></p>
+                    <p>\(\text{tg}\): <span id="resultTg">—</span></p>
+                    <p>\(\text{ctg}\): <span id="resultCtg">—</span></p>
+                    <div id="calculatorError" class="error-message" style="display:none;"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="calculator-explanation fade-slide-in">
+            <h2>Cum funcționează?</h2>
+            <p>Introduceți un unghi, alegeți unitatea de măsură (<strong>grade</strong> sau <strong>radiani</strong>) și
+                apăsați „<strong>Calculează</strong>" pentru a vedea valorile funcțiilor trigonometrice.</p>
+
+            <h3 style="margin-top: var(--space-lg);">Valori speciale importante</h3>
+            <div style="overflow-x: auto; margin-top: var(--space-md);">
+                <table style="width:100%; table-layout:fixed; border-collapse:collapse; font-size:0.875rem;">
+                    <thead>
+                        <tr style="border-bottom: 1px solid var(--clr-border);">
+                            <th style="padding:10px; text-align:center; color:var(--txt-muted);">Unghi</th>
+                            <th style="padding:10px; text-align:center; color:var(--txt-primary);">\(\sin\)</th>
+                            <th style="padding:10px; text-align:center; color:var(--txt-primary);">\(\cos\)</th>
+                            <th style="padding:10px; text-align:center; color:var(--txt-primary);">\(\text{tg}\)</th>
+                            <th style="padding:10px; text-align:center; color:var(--txt-primary);">\(\text{ctg}\)</th>
+                        </tr>
+                    </thead>
+                    <tbody style="color: var(--txt-secondary);">
+                        <tr style="border-bottom:1px solid rgba(255,255,255,0.04);">
+                            <td style="padding:10px; text-align:center; font-family:var(--font-mono);">0°</td>
+                            <td style="padding:10px; text-align:center;">0</td>
+                            <td style="padding:10px; text-align:center;">1</td>
+                            <td style="padding:10px; text-align:center;">0</td>
+                            <td style="padding:10px; text-align:center; color:var(--txt-muted);">Nedefinit</td>
+                        </tr>
+                        <tr style="border-bottom:1px solid rgba(255,255,255,0.04);">
+                            <td style="padding:10px; text-align:center; font-family:var(--font-mono);">30°</td>
+                            <td style="padding:10px; text-align:center;">\(\frac{1}{2}\)</td>
+                            <td style="padding:10px; text-align:center;">\(\frac{\sqrt{3}}{2}\)</td>
+                            <td style="padding:10px; text-align:center;">\(\frac{\sqrt{3}}{3}\)</td>
+                            <td style="padding:10px; text-align:center;">\(\sqrt{3}\)</td>
+                        </tr>
+                        <tr style="border-bottom:1px solid rgba(255,255,255,0.04);">
+                            <td style="padding:10px; text-align:center; font-family:var(--font-mono);">45°</td>
+                            <td style="padding:10px; text-align:center;">\(\frac{\sqrt{2}}{2}\)</td>
+                            <td style="padding:10px; text-align:center;">\(\frac{\sqrt{2}}{2}\)</td>
+                            <td style="padding:10px; text-align:center;">1</td>
+                            <td style="padding:10px; text-align:center;">1</td>
+                        </tr>
+                        <tr style="border-bottom:1px solid rgba(255,255,255,0.04);">
+                            <td style="padding:10px; text-align:center; font-family:var(--font-mono);">60°</td>
+                            <td style="padding:10px; text-align:center;">\(\frac{\sqrt{3}}{2}\)</td>
+                            <td style="padding:10px; text-align:center;">\(\frac{1}{2}\)</td>
+                            <td style="padding:10px; text-align:center;">\(\sqrt{3}\)</td>
+                            <td style="padding:10px; text-align:center;">\(\frac{\sqrt{3}}{3}\)</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:10px; text-align:center; font-family:var(--font-mono);">90°</td>
+                            <td style="padding:10px; text-align:center;">1</td>
+                            <td style="padding:10px; text-align:center;">0</td>
+                            <td style="padding:10px; text-align:center; color:var(--txt-muted);">Nedefinit</td>
+                            <td style="padding:10px; text-align:center;">0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p style="margin-top: var(--space-lg);"><strong>Atenție:</strong> Tangenta este nedefinită pentru
+                \(90^\circ, 270^\circ, \ldots\) (adică \(\dfrac{\pi}{2} + k\pi\)). Cotangenta este nedefinită pentru
+                \(0^\circ, 180^\circ, \ldots\) (adică \(k\pi\)).</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-brand">
+            Trigonometrie Clasa a IX-a
+        </div>
+        <p>&copy; LIIS 2026 — Realizat de Ursanu Tudor</p>
+    </footer>
+
+    <button id="scrollToTopBtn" title="Sus">↑</button>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezolvarea Triunghiului | Trigonometrie Clasa a IX-a</title>
+    <meta name="description"
+        content="Teorema sinusurilor, teorema cosinusului și formula ariei cu sinus pentru rezolvarea triunghiurilor.">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        window.MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']] }
+        };
+    </script>
+    <script id="MathJax-script" async src="js/mathjax/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+
+    <header id="mainHeader">
+        <a class="header-logo" href="index.html" aria-label="Acasă">
+            <div class="header-logo-text">
+                <span class="title">Trigonometrie</span>
+                <span class="subtitle">Clasa a IX‑a</span>
+            </div>
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation" aria-expanded="false">☰</button>
+        <nav id="mainNav">
+            <ul>
+                <li><a href="index.html">Acasă</a></li>
+                <li><a href="cerc-trigonometric.html">Cerc Trig.</a></li>
+                <li><a href="proprietati-functii.html">Proprietăți</a></li>
+                <li><a href="formule-trigonometrice.html">Formule</a></li>
+                <li><a href="rezolvarea-triunghiului.html" class="active">Triunghi</a></li>
+                <li><a href="curiozitati.html">Curiozități</a></li>
+                <li><a href="calculator-unghiuri.html">Calculator</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content-page">
+
+        <div class="page-hero fade-slide-in">
+            <div class="page-tag">Geometrie Trigonometrică</div>
+            <h1>Rezolvarea Triunghiului</h1>
+            <p>Utilizează teorema sinusurilor, teorema cosinusului și formula ariei cu sinus pentru a determina
+                elementele necunoscute ale unui triunghi.</p>
+        </div>
+
+        <!-- NOTAȚII -->
+        <div class="function-card fade-slide-in">
+            <div class="function-card-header">
+                <h2>Elementele unui Triunghi</h2>
+            </div>
+            <div class="function-card-body">
+                <h3>Convenția de notare</h3>
+                <p>Pentru un triunghi \(ABC\), latura \(a\) este <strong>opusă</strong> unghiului \(A\), latura \(b\)
+                    unghiului \(B\), iar latura \(c\) unghiului \(C\).</p>
+                <h3>Relația fundamentală</h3>
+                <div class="formula-block">
+                    $$ A + B + C = 180^\circ \quad \text{sau} \quad A + B + C = \pi \text{ rad} $$
+                </div>
+            </div>
+        </div>
+
+        <!-- TEOREMA SINUSURILOR -->
+        <div class="function-card fade-slide-in">
+            <div class="function-card-header">
+                <h2>Teorema Sinusurilor</h2>
+            </div>
+            <div class="function-card-body">
+                <h3>Enunț</h3>
+                <p>Într-un triunghi oarecare, raportul dintre o latură și sinusul unghiului opus este constant și
+                    egal cu diametrul cercului circumscris.</p>
+
+                <h3>Formula</h3>
+                <div class="formula-block">
+                    $$ \frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} = 2R $$
+                </div>
+
+                <h3>Când o aplici?</h3>
+                <ul>
+                    <li><strong>U.L.U.</strong> — Două unghiuri și o latură (opusă unuia dintre ele)</li>
+                    <li><strong>L.U.L.*</strong> — Două laturi și un unghi opus uneia dintre ele (cazul ambiguu)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TEOREMA COSINUSULUI -->
+        <div class="function-card fade-slide-in">
+            <div class="function-card-header">
+                <h2>Teorema Cosinusului</h2>
+            </div>
+            <div class="function-card-body">
+                <h3>Enunț</h3>
+                <p>Pătratul unei laturi este egal cu suma pătratelor celorlalte două laturi, minus dublul produsului
+                    acestora înmulțit cu cosinusul unghiului dintre ele.</p>
+
+                <h3>Formulele (una pentru fiecare latură)</h3>
+                <div class="formula-block">
+                    $$ a^2 = b^2 + c^2 - 2bc\cos A $$
+                    $$ b^2 = a^2 + c^2 - 2ac\cos B $$
+                    $$ c^2 = a^2 + b^2 - 2ab\cos C $$
+                </div>
+
+                <h3>Când o aplici?</h3>
+                <ul>
+                    <li><strong>L.U.L.</strong> — Două laturi și unghiul cuprins între ele</li>
+                    <li><strong>L.L.L.</strong> — Toate cele trei laturi cunoscute</li>
+                </ul>
+
+                <h3>Observație</h3>
+                <p>Dacă \(A = 90^\circ\), atunci \(\cos A = 0\) și formula devine \( a^2 = b^2 + c^2 \) — regăsim
+                    <strong>Teorema lui Pitagora</strong> ca un caz particular.</p>
+            </div>
+        </div>
+
+        <!-- FORMULA ARIEI -->
+        <div class="function-card fade-slide-in">
+            <div class="function-card-header">
+                <h2>Formula Ariei cu Sinus</h2>
+            </div>
+            <div class="function-card-body">
+                <h3>Enunț</h3>
+                <p>Aria unui triunghi este jumătate din produsul a două laturi și sinusul unghiului cuprins între
+                    ele.</p>
+
+                <h3>Cele trei variante echivalente</h3>
+                <div class="formula-block">
+                    $$ \mathcal{A} = \frac{1}{2}\,ab\sin C = \frac{1}{2}\,bc\sin A = \frac{1}{2}\,ac\sin B $$
+                </div>
+
+                <h3>Forma cu raza circumscrisă</h3>
+                <p>Folosind teorema sinusurilor, aria se poate exprima și prin raza \(R\) a cercului circumscris:</p>
+                <div class="formula-block">
+                    $$ \mathcal{A} = \frac{abc}{4R} $$
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-brand">
+            Trigonometrie Clasa a IX-a
+        </div>
+        <p>&copy; LIIS 2026 — Realizat de Ursanu Tudor</p>
+    </footer>
+
+    <button id="scrollToTopBtn" title="Sus">↑</button>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

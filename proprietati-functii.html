@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proprietăți Funcții Trigonometrice | Trigonometrie Clasa a IX-a</title>
+  <meta name="description"
+    content="Proprietățile funcțiilor trigonometrice: sinus, cosinus, tangentă, cotangentă. Domeniu, codomeniu, paritate, periodicitate, semn.">
+  <link rel="stylesheet" href="css/style.css">
+  <script async src="js/mathjax/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+
+  <header id="mainHeader">
+    <a class="header-logo" href="index.html" aria-label="Acasă">
+      <div class="header-logo-text">
+        <span class="title">Trigonometrie</span>
+        <span class="subtitle">Clasa a IX‑a</span>
+      </div>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation" aria-expanded="false">☰</button>
+    <nav id="mainNav">
+      <ul>
+        <li><a href="index.html">Acasă</a></li>
+        <li><a href="cerc-trigonometric.html">Cerc Trig.</a></li>
+        <li><a href="proprietati-functii.html" class="active">Proprietăți</a></li>
+        <li><a href="formule-trigonometrice.html">Formule</a></li>
+        <li><a href="rezolvarea-triunghiului.html">Triunghi</a></li>
+        <li><a href="curiozitati.html">Curiozități</a></li>
+        <li><a href="calculator-unghiuri.html">Calculator</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content-page">
+
+    <div class="page-hero fade-slide-in">
+      <div class="page-tag">Funcții Trigonometrice</div>
+      <h1>Proprietăți ale Funcțiilor</h1>
+      <p>Domeniu, codomeniu, paritate, periodicitate, monotonie și semn pentru cele patru funcții trigonometrice
+        fundamentale.</p>
+    </div>
+
+    <!-- SIN -->
+    <div class="function-card fade-slide-in">
+      <div class="function-card-header">
+        <h2>Funcția Sinus — \(\sin x\)</h2>
+      </div>
+      <div class="function-card-body">
+        <div class="prop-grid">
+          <div class="prop-item">
+            <div class="prop-label">Domeniu</div>
+            <div class="prop-value">\( \mathbb{R} \)</div>
+          </div>
+          <div class="prop-item">
+            <div class="prop-label">Codomeniu</div>
+            <div class="prop-value">\( [-1,\, 1] \)</div>
+          </div>
+          <div class="prop-item">
+            <div class="prop-label">Paritate</div>
+            <div class="prop-value">Impară</div>
+          </div>
+          <div class="prop-item">
+            <div class="prop-label">Perioadă</div>
+            <div class="prop-value">\( T = 2\pi \)</div>
+          </div>
+        </div>
+        <p><strong>Paritate:</strong> \( \sin(-x) = -\sin x \)</p>
+        <p><strong>Periodicitate:</strong> \( \sin(x + 2k\pi) = \sin x,\quad k \in \mathbb{Z} \)</p>
+        <p><strong>Monotonie:</strong></p>
+        <ul>
+          <li>Crescătoare pe \( \left[-\dfrac{\pi}{2},\, \dfrac{\pi}{2}\right] \)</li>
+          <li>Descrescătoare pe \( \left[\dfrac{\pi}{2},\, \dfrac{3\pi}{2}\right] \)</li>
+        </ul>
+        <p><strong>Semn:</strong> Pozitiv în cadranele I și II · Negativ în cadranele III și IV · Nul pentru \( x =
+          k\pi,\; k \in \mathbb{Z} \)</p>
+      </div>
+    </div>
+
+    <!-- COS -->
+    <div class="function-card fade-slide-in">
+      <div class="function-card-header">
+        <h2>Funcția Cosinus — \(\cos x\)</h2>
+      </div>
+      <div class="function-card-body">
+        <div class="prop-grid">
+          <div class="prop-item">
+            <div class="prop-label">Domeniu</div>
+            <div class="prop-value">\( \mathbb{R} \)</div>
+          </div>
+          <div class="prop-item">
+            <div class="prop-label">Codomeniu</div>
+            <div class="prop-value">\( [-1,\, 1] \)</div>
+          </div>
+          <div class="prop-item">
+            <div class="prop-label">Paritate</div>
+            <div class="prop-value">Pară</div>
+          </div>
+          <div class="prop-item">
+            <div class="prop-label">Perioadă</div>
+            <div class="prop-value">\( T = 2\pi \)</div>
+          </div>
+        </div>
+        <p><strong>Paritate:</strong> \( \cos(-x) = \cos x \)</p>
+        <p><strong>Periodicitate:</strong> \( \cos(x + 2k\pi) = \cos x,\quad k \in \mathbb{Z} \)</p>
+        <p><strong>Monotonie:</strong></p>
+        <ul>
+          <li>Descrescătoare pe \( [0,\, \pi] \)</li>
+          <li>Crescătoare pe \( [\pi,\, 2\pi] \)</li>
+        </ul>
+        <p><strong>Semn:</strong> Pozitiv în cadranele I și IV · Negativ în cadranele II și III · Nul pentru \( x =
+          \dfrac{\pi}{2} + k\pi,\; k \in \mathbb{Z} \)</p>
+      </div>
+    </div>
+
+    <!-- TAN -->
+    <div class="function-card fade-slide-in">
+      <div class="function-card-header">
+        <h2>Funcția Tangentă — \(\text{tg}\, x\)</h2>
+      </div>
+      <div class="function-card-body">
+        <div class="prop-grid">
+          <div class="prop-item">
+            <div class="prop-label">Domeniu</div>
+            <div class="prop-value">\( \mathbb{R} \setminus \!\left\{\tfrac{\pi}{2}+k\pi\right\} \)</div>
+          </div>
+          <div class="prop-item">
+            <div class="prop-label">Codomeniu</div>
+            <div class="prop-value">\( \mathbb{R} \)</div>
+          </div>
+          <div class="prop-item">
+            <div class="prop-label">Paritate</div>
+            <div class="prop-value">Impară</div>
+          </div>
+          <div class="prop-item">
+            <div class="prop-label">Perioadă</div>
+            <div class="prop-value">\( T = \pi \)</div>
+          </div>
+        </div>
+        <p><strong>Definiție:</strong> \( \text{tg}\, x = \dfrac{\sin x}{\cos x},\quad \cos x \neq 0 \)</p>
+        <p><strong>Paritate:</strong> \( \text{tg}(-x) = -\text{tg}\, x \)</p>
+        <p><strong>Periodicitate:</strong> \( \text{tg}(x + k\pi) = \text{tg}\, x,\quad k \in \mathbb{Z} \)</p>
+        <p><strong>Monotonie:</strong> Strict crescătoare pe fiecare interval de definiție.</p>
+        <p><strong>Semn:</strong> Pozitivă în cadranele I și III · Negativă în cadranele II și IV · Nulă pentru \( x =
+          k\pi \)</p>
+      </div>
+    </div>
+
+    <!-- COT -->
+    <div class="function-card fade-slide-in">
+      <div class="function-card-header">
+        <h2>Funcția Cotangentă — \(\text{ctg}\, x\)</h2>
+      </div>
+      <div class="function-card-body">
+        <div class="prop-grid">
+          <div class="prop-item">
+            <div class="prop-label">Domeniu</div>
+            <div class="prop-value">\( \mathbb{R} \setminus \{k\pi\} \)</div>
+          </div>
+          <div class="prop-item">
+            <div class="prop-label">Codomeniu</div>
+            <div class="prop-value">\( \mathbb{R} \)</div>
+          </div>
+          <div class="prop-item">
+            <div class="prop-label">Paritate</div>
+            <div class="prop-value">Impară</div>
+          </div>
+          <div class="prop-item">
+            <div class="prop-label">Perioadă</div>
+            <div class="prop-value">\( T = \pi \)</div>
+          </div>
+        </div>
+        <p><strong>Definiție:</strong> \( \text{ctg}\, x = \dfrac{\cos x}{\sin x},\quad \sin x \neq 0 \)</p>
+        <p><strong>Paritate:</strong> \( \text{ctg}(-x) = -\text{ctg}\, x \)</p>
+        <p><strong>Periodicitate:</strong> \( \text{ctg}(x + k\pi) = \text{ctg}\, x,\quad k \in \mathbb{Z} \)</p>
+        <p><strong>Monotonie:</strong> Strict descrescătoare pe fiecare interval de definiție.</p>
+        <p><strong>Semn:</strong> Pozitivă în cadranele I și III · Negativă în cadranele II și IV · Nulă pentru \( x =
+          \dfrac{\pi}{2} + k\pi \)</p>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-brand">
+      Trigonometrie Clasa a IX-a
+    </div>
+    <p>&copy; LIIS 2026 — Realizat de Ursanu Tudor</p>
+  </footer>
+
+  <button id="scrollToTopBtn" title="Sus">↑</button>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
